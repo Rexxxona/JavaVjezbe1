@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.8">
+  <diagram id="vozila_hijerarhija" name="Vozila - Hijerarhija">
+    <mxGraphModel dx="969" dy="578" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vozilo" value="Vozilo&#xa;&#xa;--- Atributi ---&#xa;+ proizvodjac : String&#xa;+ godinaProizvodnje : int&#xa;+ boja : String&#xa;+ kubikaza : float&#xa;&#xa;--- Metode ---&#xa;+ getProizvodjac() : String&#xa;+ getGodinaProizvodnje() : int&#xa;+ getBoja() : String&#xa;+ getKubikaza() : float&#xa;+ izracunajCijenuRegistracije() : double&#xa;+ prikaziInfo() : void" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=0;spacing=4;" parent="1" vertex="1">
+          <mxGeometry x="400" y="80" width="260" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="automobil" value="Automobil&#xa;&#xa;--- Atributi ---&#xa;+ dizel : boolean&#xa;&#xa;--- Metode ---&#xa;+ isDizel() : boolean&#xa;+ izracunajCijenuRegistracije() : double (override)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="60" y="400" width="240" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="kamion" value="Kamion&#xa;&#xa;--- Atributi ---&#xa;+ imaPrikolicu : boolean&#xa;&#xa;--- Metode ---&#xa;+ isImaPrikolicu() : boolean&#xa;+ izracunajCijenuRegistracije() : double (override)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="380" y="400" width="240" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="kombi" value="Kombi&#xa;&#xa;--- Atributi ---&#xa;+ brojPutnika : int&#xa;&#xa;--- Metode ---&#xa;+ getBrojPutnika() : int&#xa;+ izracunajCijenuRegistracije() : double (override)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="700" y="400" width="240" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_automobil" style="endArrow=block;endFill=1;html=1;strokeColor=#000000;" parent="1" source="automobil" target="vozilo" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_kamion" style="endArrow=block;endFill=1;html=1;strokeColor=#000000;" parent="1" source="kamion" target="vozilo" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_kombi" style="endArrow=block;endFill=1;html=1;strokeColor=#000000;" parent="1" source="kombi" target="vozilo" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
